@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Placement Predictor</title>
+</head>
+<body>
+	<h2> Student Placement Predictor Model </h2> <br>
+	<h4> Enter the folowing attributes:</h4>
+		<form action="{{url_for('predict')}}", method = "POST">
+			<label> CGPA</label><br>
+			<input type = "text" name="cgpa" placeholder = "Student CGPA(1-10)" min="0" max="10" required width = "100"><br>
+<br>
+			<label> IQ</label><br>
+			<input type = "text" name="iq" placeholder = "Student IQ(1-150)"min="0" max="150" required><br>
+<br>
+			<label> Profile Score </label><br>
+			<input type = "text" name="profile_score" placeholder = "Profile Score(1-100)"min="0" max="100" required><br>
+
+<br>		<input type="Reset" name="result">
+			<input type="Submit" name="result">
+		</form>
+		<p> Plcacement Status: {{result}}.</p>
+</body>
+</html>
